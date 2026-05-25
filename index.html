@@ -101,6 +101,23 @@ border:2px solid #ccc;
 display:block;
 }
 
+.hotspot{
+position:absolute;
+background:rgba(255,0,0,0.15);
+border:none;
+cursor:pointer;
+z-index:10;
+}
+
+.hotspot:hover{
+background:rgba(255,0,0,0.3);
+}
+
+.inputHighlight{
+border:3px solid #ff9800 !important;
+background:#fff8e1;
+}
+  
 @media(max-width:700px){
 
 .nppvLayout{
@@ -441,6 +458,41 @@ function calc(){
     `;
 }
 
+function changeNPPVMachine(){
+
+let machine =
+document.getElementById("nppvMachine").value;
+
+document.getElementById("v60Wrap").style.display = "none";
+document.getElementById("nkvWrap").style.display = "none";
+
+if(machine === "v60"){
+document.getElementById("v60Wrap").style.display = "block";
+}
+
+if(machine === "nkv"){
+document.getElementById("nkvWrap").style.display = "block";
+}
+
+}
+
+function focusInput(id){
+
+document.querySelectorAll("input").forEach(el=>{
+el.classList.remove("inputHighlight");
+});
+
+document.getElementById(id).focus();
+
+document.getElementById(id).classList.add("inputHighlight");
+
+document.getElementById(id).scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+  
 </script>
 
 </body>
