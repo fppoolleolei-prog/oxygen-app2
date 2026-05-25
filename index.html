@@ -245,30 +245,8 @@ flex-direction:column;
     </div>
 
 
-    <!-- V60 -->
+<!-- V60 -->
 <div class="screenWrap" id="v60Wrap">
-
-  <img src="NKV丸.png" class="screenImg">
-
-  <!-- 分時換気量 -->
-  <button class="hotspot"
-  style="top:21%;left:3%;width:24%;height:18%;"
-  onclick="focusInput('totalFlow')"></button>
-
-  <!-- リーク -->
-  <button class="hotspot"
-  style="top:67%;left:2%;width:25%;height:15%;"
-  onclick="focusInput('leak')"></button>
-
-  <!-- FiO2 -->
-  <button class="hotspot"
-  style="bottom:1%;right:1%;width:26%;height:15%;"
-  onclick="focusInput('fio2')"></button>
-
-</div>
-
-<!-- NKV -->
-<div class="screenWrap" id="nkvWrap" style="display:none;">
 
   <img src="V60丸.png" class="screenImg">
 
@@ -285,6 +263,28 @@ flex-direction:column;
   <!-- FiO2 -->
   <button class="hotspot"
   style="bottom:8%;left:24%;width:18%;height:16%;"
+  onclick="focusInput('fio2')"></button>
+
+</div>
+
+<!-- NKV -->
+<div class="screenWrap" id="nkvWrap" style="display:none;">
+
+  <img src="NKV丸.png" class="screenImg">
+
+  <!-- 分時換気量 -->
+  <button class="hotspot"
+  style="top:21%;left:3%;width:24%;height:18%;"
+  onclick="focusInput('totalFlow')"></button>
+
+  <!-- リーク -->
+  <button class="hotspot"
+  style="top:67%;left:2%;width:25%;height:15%;"
+  onclick="focusInput('leak')"></button>
+
+  <!-- FiO2 -->
+  <button class="hotspot"
+  style="bottom:1%;right:1%;width:26%;height:15%;"
   onclick="focusInput('fio2')"></button>
 
 </div>
