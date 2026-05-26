@@ -57,6 +57,24 @@ select:focus{outline:none;border-color:var(--main);box-shadow:0 0 0 4px rgba(25,
 
 .note{margin-top:10px;font-size:16px;color:#555;}
 
+.tapNote{
+display:inline-block;
+margin-bottom:12px;
+padding:6px 12px;
+
+font-size:18px;
+font-weight:bold;
+color:#222;
+
+background:
+linear-gradient(
+transparent 55%,
+#fff59d 55%
+);
+
+border-radius:6px;
+}
+
 .small{font-size:13px;font-weight:normal;}
 
 .result{margin-top:24px;padding:20px;border-radius:18px;background:#f5f9ff;
@@ -103,8 +121,8 @@ display:block;
 
 .hotspot{
 position:absolute;
-background:rgba(255,0,0,0.05);
-border:1px solid red;
+background:transparent;
+border:none;
 cursor:pointer;
 z-index:10;
 
@@ -118,10 +136,20 @@ font-size:0;
 line-height:0;
 }
 
-.hotspot:hover{
-background:rgba(255,0,0,0.3);
+padding:0;
+margin:0;
+
+appearance:none;
+-webkit-appearance:none;
+
+font-size:0;
+line-height:0;
 }
 
+.hotspot:hover{
+background:transparent;
+}
+  
 .inputHighlight{
 border:3px solid #ff9800 !important;
 background:#fff8e1;
@@ -251,7 +279,7 @@ flex-direction:column;
   <!-- 右：画像 -->
   <div class="nppvRight">
 
-    <div class="note">
+    <div class="tapNote">
       画像の色枠をタップすると入力欄へ移動します
     </div>
 
