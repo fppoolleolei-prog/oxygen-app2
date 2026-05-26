@@ -534,23 +534,55 @@ function calc(){
   let time = usable / flow;
 
   let status = "";
+  let exchange = "";
 
+  // 背景色リセット
+  document.body.classList.remove(
+    "safeBg",
+    "cautionBg",
+    "dangerBg"
+  );
+
+  // 危険
   if(time < 10){
 
     status =
       "<div class='warn'>⚠ 危険（10分未満）</div>";
 
+    exchange =
+      "<div class='warn'>至急交換してください</div>";
+
+    document.body.classList.add("dangerBg");
+
   }
+
+  // 注意
   else if(time < 20){
 
     status =
       "<div class='warn'>⚠ 注意（20分未満）</div>";
 
+    exchange =
+      `<div class='warn'>
+      あと ${Math.round(time - 5)} 分以内に交換推奨
+      </div>`;
+
+    document.body.classList.add("cautionBg");
+
   }
+
+  // 安全
   else{
 
     status =
       "<div class='safe'>✔ 使用可能</div>";
+
+    exchange =
+      `<div class='safe'>
+      約 ${Math.round(time - 10)} 分後に交換準備推奨
+      </div>`;
+
+    document.body.classList.add("safeBg");
 
   }
 
@@ -565,6 +597,8 @@ function calc(){
     </div>
 
     ${status}
+
+    ${exchange}
     `;
 }
 
