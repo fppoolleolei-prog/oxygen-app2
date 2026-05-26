@@ -179,6 +179,17 @@ flex-direction:column;
 </select>
 </div>
 
+<!-- 呼吸器機種選択 -->
+<div id="ventMachineArea" style="display:none;margin-top:10px;">
+
+<label>呼吸器機種選択</label>
+
+<select id="ventMachine" onchange="changeVentMachine()">
+  <option value="servo">Servo-air</option>
+  <option value="monnal">monnal T60</option>
+</select>
+
+</div>
 
     <label>ボンベ圧（MPa）</label>
 
@@ -292,18 +303,6 @@ flex-direction:column;
   </div>
 
 </div>
-
-</div>
-
-<!-- 呼吸器機種選択 -->
-<div id="ventMachineArea" style="display:none;margin-top:10px;">
-
-<label>呼吸器機種選択</label>
-
-<select id="ventMachine" onchange="changeVentMachine()">
-  <option value="servo">Servo-air</option>
-  <option value="monnal">monnal T60</option>
-</select>
 
 </div>
   
