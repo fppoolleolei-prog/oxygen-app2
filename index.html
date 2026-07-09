@@ -260,7 +260,7 @@ transition:0.5s;
     <label>モード</label>
 
     <select id="mode">
-      <option value="normal">通常酸素</option>
+      <option value="normal">カニューレ・マスク</option>
       <option value="nppv">NPPV（バイパップ）</option>
       <option value="vent">呼吸器</option>
     </select>
@@ -312,7 +312,7 @@ transition:0.5s;
       ※ 酸素ボンベの満タンは14.7MPaです
     </div>
 
-    <!-- 通常酸素 -->
+    <!-- カニューレ・マスク -->
     <div id="normalFields">
 
       <label>流量（L/min）</label>
@@ -474,7 +474,7 @@ const mode = document.getElementById("mode");
 
 mode.addEventListener("change", () => {
 
-  // 通常酸素
+  // カニューレ・マスク
   document.getElementById("normalFields").style.display =
     (mode.value === "normal") ? "block" : "none";
 
@@ -503,7 +503,7 @@ function setPressureAndCalc(value){
 
 function getFlow(){
 
-  // 通常酸素
+  // カニューレ・マスク
   if(mode.value === "normal"){
 
     return parseFloat(
