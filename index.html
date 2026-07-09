@@ -98,13 +98,19 @@ margin-top:16px;
 }
 
 .nppvLeft{
-flex:0.8;
-min-width:220px;
+flex:1;
+min-width:140px;
 }
 
 .nppvRight{
-flex:1.2;
-min-width:320px;
+flex:1;
+min-width:170px;
+}
+
+.screenImg{
+width:100%;
+max-width:240px;
+height:auto;
 }
 
 .screenWrap{
@@ -158,7 +164,26 @@ background:#fff8e1;
 @media(max-width:700px){
 
 .nppvLayout{
-flex-direction:column;
+display:flex;
+flex-direction:row;
+align-items:flex-start;
+gap:10px;
+}
+
+.nppvLeft{
+flex:1;
+min-width:180px;
+}
+
+.nppvRight{
+flex:1;
+min-width:220px;
+}
+
+.screenImg{
+max-width:180px;
+width:100%;
+height:auto;
 }
 
 }
