@@ -38,8 +38,8 @@ select:focus{outline:none;border-color:var(--main);box-shadow:0 0 0 4px rgba(25,
 .inputRow{display:flex;align-items:center;gap:12px;}
 
 .inputRow input{
-flex:1;
-min-width:0;
+    flex:0.75;
+    min-width:0;
 }
 
 .pressureImg{
@@ -114,8 +114,8 @@ min-width:110px;
 }
 
 .nppvRight{
-flex:1.3;
-min-width:0;
+    flex:1.6;
+    min-width:0;
 }
 
 .screenImg{
@@ -130,7 +130,7 @@ position:relative;
 
 .screenImg{
 width:100%;
-max-width:240px;
+max-width:280px;
 height:auto;
 border-radius:14px;
 border:2px solid #ccc;
@@ -175,40 +175,29 @@ background:#fff8e1;
   
 @media(max-width:700px){
 
-.nppvLeft{
-flex:0.6;
-min-width:0;
-}
+  .nppvLeft{
+    flex:0.6;
+    min-width:0;
+  }
 
-.nppvRight{
-flex:1.4;
-min-width:0;
-}
+  .nppvRight{
+    flex:1.4;
+    min-width:0;
+  }
 
-.screenImg{
-width:100%;
-max-width:220px;
-height:auto;
-}
+  .nppvLeft input{
+    padding:10px;
+    font-size:16px;
+  }
 
-}
-
-.screenImg{
-width:100%;
-max-width:150px;
-height:auto;
-}
+  .screenImg{
+    width:100%;
+    max-width:220px;
+    height:auto;
+  }
 
 }
 
- @media(max-width:700px){
-
-.nppvLeft input{
-padding:10px;
-font-size:16px;
-}
-
-} 
 
 @media(max-width:600px){
 
