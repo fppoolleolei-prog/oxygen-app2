@@ -35,6 +35,25 @@ input{max-width:100%;}
 input:focus,
 select:focus{outline:none;border-color:var(--main);box-shadow:0 0 0 4px rgba(25,118,210,0.15);}
 
+/* ===== 入力項目の色分け ===== */
+
+/* FiO2（赤） */
+#fio2,
+#fio2_v{
+    background:#ffe5e5;
+}
+
+/* 分時換気量（黄色） */
+#totalFlow,
+#mv_v{
+    background:#fff8cc;
+}
+
+/* リーク量（緑） */
+#leak{
+    background:#e8f8e8;
+}
+  
 .inputRow{display:flex;align-items:center;gap:12px;}
 
 .inputRow input{
@@ -43,7 +62,7 @@ select:focus{outline:none;border-color:var(--main);box-shadow:0 0 0 4px rgba(25,
 }
 
 .pressureImg{
-width:70px;
+width:85px;
 height:auto;
 flex-shrink:0;
 }
