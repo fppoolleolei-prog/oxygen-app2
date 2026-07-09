@@ -43,13 +43,15 @@ min-width:0;
 }
 
 .pressureImg{
-width:90px;
+width:70px;
 height:auto;
+flex-shrink:0;
 }
 
 .flowImg{
-height:120px;
-width:auto;
+width:60px;
+height:auto;
+flex-shrink:0;
 }
 
 .quickBtns{display:flex;gap:10px;margin-top:14px;}
@@ -107,13 +109,13 @@ margin-top:16px;
 }
 
 .nppvLeft{
-flex:1;
-min-width:140px;
+flex:0.7;
+min-width:110px;
 }
 
 .nppvRight{
-flex:1;
-min-width:170px;
+flex:1.3;
+min-width:0;
 }
 
 .screenImg{
@@ -173,22 +175,22 @@ background:#fff8e1;
   
 @media(max-width:700px){
 
-.nppvLayout{
-display:flex;
-flex-direction:row;
-align-items:flex-start;
-gap:8px;
-flex-wrap:nowrap;
-}
-
 .nppvLeft{
-flex:1;
+flex:0.6;
 min-width:0;
 }
 
 .nppvRight{
-flex:1;
+flex:1.4;
 min-width:0;
+}
+
+.screenImg{
+width:100%;
+max-width:220px;
+height:auto;
+}
+
 }
 
 .screenImg{
@@ -198,6 +200,15 @@ height:auto;
 }
 
 }
+
+ @media(max-width:700px){
+
+.nppvLeft input{
+padding:10px;
+font-size:16px;
+}
+
+} 
 
 @media(max-width:600px){
 
