@@ -649,11 +649,26 @@ function calc(){
 
   }
 
+  // 空になる予定時刻を計算
+let now = new Date();
+
+now.setMinutes(
+  now.getMinutes() + Math.round(time)
+);
+
+let emptyTime =
+  now.getHours() + "時" +
+  now.getMinutes() + "分頃";
+
   document.getElementById("result").innerHTML =
     `
     <div class="resultTime">
       残り ${Math.round(time)} 分
     </div>
+
+    <div class="resultFlow">
+  空になる予定時刻：${emptyTime}
+</div>
 
     <div class="resultFlow">
       酸素消費 ${flow.toFixed(1)} L/min
