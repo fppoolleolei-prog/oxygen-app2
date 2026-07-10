@@ -324,7 +324,7 @@ transition:0.5s;
 <label>NPPV機種選択</label>
 
   <div class="helpText">
-① 使用しているNPPV機種を選択してください
+使用しているNPPV機種を選択してください
 </div>
   
 <select id="nppvMachine" onchange="changeNPPVMachine()">
@@ -332,11 +332,6 @@ transition:0.5s;
 <option value="nkv">NKVｰ330</option>
 </select>
 
-  <div class="helpText">
-② モニター画面のFiO₂・分時換気量・リーク量を入力してください。<br>
-画像の黄色枠をタップすると、対応する入力欄へ移動します。
-</div>
-  
 </div>
 
 <!-- 呼吸器機種選択 -->
@@ -345,7 +340,7 @@ transition:0.5s;
 <label>呼吸器機種選択</label>
 
   <div class="helpText">
-① 使用している呼吸器機種を選択してください
+使用している呼吸器機種を選択してください
 </div>
 
 <select id="ventMachine" onchange="changeVentMachine()">
@@ -353,17 +348,12 @@ transition:0.5s;
   <option value="monnal">monnal T60</option>
 </select>
 
-  <div class="helpText">
-② モニター画面のFiO₂・分時換気量を入力してください。<br>
-画像の黄色枠をタップすると、対応する入力欄へ移動します。
-</div>
-
 </div>
 
     <label>ボンベ圧（MPa）</label>
 
     <div class="helpText">
-①圧力計を確認して現在の圧力を入力してください
+①圧力計を確認して現在の圧力を入力してください。または下記の選択から該当する圧力をタップしてください。
 </div>
 
     <div class="inputRow">
@@ -408,6 +398,11 @@ transition:0.5s;
 
     <!-- NPPV -->
 <div id="nppvFields" style="display:none;">
+
+   <div class="helpText">
+② モニター画面のFiO₂・分時換気量・リーク量を入力してください。<br>
+画像の黄色枠をタップすると、対応する入力欄へ移動します。
+</div>
 
 <div class="nppvLayout">
 
@@ -488,6 +483,12 @@ transition:0.5s;
   
     <!-- 呼吸器 -->
 <div id="ventFields" style="display:none;">
+
+   <div class="helpText">
+② モニター画面のFiO₂・分時換気量を入力してください。<br>
+画像の黄色枠をタップすると、対応する入力欄へ移動します。
+</div>
+
 
 <div class="nppvLayout">
 
