@@ -357,7 +357,7 @@ transition:0.5s;
     <label>ボンベ圧（MPa）</label>
 
     <div class="helpText">
-①圧力計を確認して現在の圧力を入力してください。または下記の選択から該当する圧力をタップしてください。
+①圧力計を確認して現在の圧力を入力または、下記の選択から該当する圧力をタップしてください
 </div>
 
     <div class="inputRow">
@@ -404,8 +404,7 @@ transition:0.5s;
 <div id="nppvFields" style="display:none;">
 
    <div class="helpText">
-② モニター画面のFiO₂・分時換気量・リーク量を入力してください。<br>
-画像の黄色枠をタップすると、対応する入力欄へ移動します。
+② モニター画面のFiO₂・分時換気量・リーク量を入力してください
 </div>
 
 <div class="nppvLayout">
@@ -489,8 +488,7 @@ transition:0.5s;
 <div id="ventFields" style="display:none;">
 
    <div class="helpText">
-② モニター画面のFiO₂・分時換気量を入力してください。<br>
-画像の黄色枠をタップすると、対応する入力欄へ移動します。
+② モニター画面のFiO₂・分時換気量を入力してください
 </div>
 
 
@@ -769,13 +767,15 @@ document.getElementById("nppvMachine").value;
 document.getElementById("v60Wrap").style.display = "none";
 document.getElementById("nkvWrap").style.display = "none";
 
-if(machine === "v60"){
-document.getElementById("v60Wrap").style.display = "block";
-}
 
 if(machine === "nkv"){
 document.getElementById("nkvWrap").style.display = "block";
 }
+  
+if(machine === "v60"){
+document.getElementById("v60Wrap").style.display = "block";
+}
+
 
 }
 
@@ -806,12 +806,13 @@ document.getElementById("ventMachine").value;
 document.getElementById("servoWrap").style.display = "none";
 document.getElementById("monnalWrap").style.display = "none";
 
-if(machine === "servo"){
-document.getElementById("servoWrap").style.display = "block";
-}
 
 if(machine === "monnal"){
 document.getElementById("monnalWrap").style.display = "block";
+}
+
+if(machine === "servo"){
+document.getElementById("servoWrap").style.display = "block";
 }
 
 }
