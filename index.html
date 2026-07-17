@@ -17,23 +17,44 @@
 
 *{box-sizing:border-box;}
 
-body{margin:0;padding:20px;font-family:"Hiragino Sans","Yu Gothic",sans-serif;
-     background:linear-gradient(180deg,#edf5ff,#dfeeff);color:#222;}
+body{margin:0;
+     padding:20px;
+     font-family:"Hiragino Sans","Yu Gothic",sans-serif;
+     background:linear-gradient(180deg,#edf5ff,#dfeeff);
+     color:#222;}
 
-.container{max-width:900px;margin:auto;}
+.container{max-width:900px;
+           margin:auto;}
 
-  .card{background:var(--card);border-radius:24px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,0.12);}
+  .card{background:var(--card);
+        border-radius:24px;
+        padding:24px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.12);}
 
-h1{margin-top:0;margin-bottom:20px;font-size:30px;text-align:center;color:var(--main);}
+h1{margin-top:0;
+   margin-bottom:20px;
+   font-size:30px;
+   text-align:center;
+   color:var(--main);}
 
-label{display:block;margin-top:18px;margin-bottom:6px;font-size:18px;font-weight:bold;}
+label{display:block;
+      margin-top:18px;
+      margin-bottom:6px;
+      font-size:18px;
+      font-weight:bold;}
 
 input,
-select{width:100%;padding:14px;border-radius:14px;border:1px solid #cfd8dc;font-size:18px;background:#fff;}
+select{width:100%;
+       padding:14px;
+       border-radius:14px;
+       border:1px solid #cfd8dc;
+       font-size:18px;
+       background:#fff;}
 input{max-width:100%;}
 
 input:focus,
-select:focus{outline:none;border-color:var(--main);box-shadow:0 0 0 4px rgba(25,118,210,0.15);}
+select:focus{outline:none;
+             border-color:var(--main);box-shadow:0 0 0 4px rgba(25,118,210,0.15);}
 
 /* ===== 入力項目の色分け ===== */
 
@@ -73,17 +94,38 @@ height:auto;
 flex-shrink:0;
 }
 
-.quickBtns{display:flex;gap:10px;margin-top:14px;}
+.quickBtns{display:flex;gap:10px;
+           margin-top:14px;}
 
-.quickBtns button{flex:1;border:none;border-radius:14px;background:var(--main);
-                  color:white;padding:14px;font-size:16px;font-weight:bold;cursor:pointer;transition:0.2s;}
+.quickBtns button{flex:1;
+                  border:none;
+                  border-radius:14px;
+                  background:var(--main);
+                  color:white;
+                  padding:14px;
+                  font-size:16px;
+                  font-weight:bold;
+                  cursor:pointer;
+                  transition:0.2s;}
 
-.quickBtns button:hover{transform:translateY(-2px);opacity:0.95;}
+.quickBtns button:hover{
+  transform:translateY(-2px);
+  opacity:0.95;}
 
-.calc{width:100%;margin-top:24px;padding:18px;border:none;border-radius:18px;
-  background:#43a047;color:white;font-size:22px;font-weight:bold;cursor:pointer;transition:0.2s;}
+.calc{width:100%;
+      margin-top:24px;
+      padding:18px;
+      border:none;
+      border-radius:18px;
+  background:#43a047;
+      color:white;
+      font-size:22px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.2s;}
 
-.calc:hover{transform:translateY(-2px);opacity:0.95;}
+.calc:hover{transform:translateY(-2px);
+            opacity:0.95;}
 
 .note{margin-top:10px;
       margin-bottom:20px;
@@ -109,20 +151,35 @@ transparent 55%,
 border-radius:6px;
 }
 
-.small{font-size:13px;font-weight:normal;}
+.small{font-size:13px;
+       font-weight:normal;}
 
-.result{margin-top:24px;padding:20px;border-radius:18px;background:#f5f9ff;
-  border:2px solid #d7e7ff;text-align:center;}
+.result{margin-top:24px;
+        padding:20px;
+        border-radius:18px;background:#f5f9ff;
+ 　　　 border:2px solid #d7e7ff;
+        text-align:center;}
 
-.resultTime{font-size:38px;font-weight:bold;color:#0d47a1;}
+.resultTime{font-size:38px;
+            font-weight:bold;color:#0d47a1;}
 
-.resultFlow{margin-top:10px;font-size:20px}
+.resultFlow{margin-top:10px;
+            font-size:20px}
 
-.warn{margin-top:16px;color:var(--warn);font-size:22px;font-weight:bold;}
+.warn{margin-top:16px;
+      color:var(--warn);
+      font-size:22px;
+      font-weight:bold;}
 
-.safe{margin-top:16px;color:var(--safe);font-size:22px;font-weight:bold;}
+.safe{margin-top:16px;
+      color:var(--safe);
+      font-size:22px;
+      font-weight:bold;}
 
-.footer{margin-top:20px;text-align:center;font-size:14px;color:#777;}
+.footer{margin-top:20px;
+        text-align:center;
+        font-size:14px;
+        color:#777;}
 
 .nppvLayout{
 display:flex;
@@ -365,8 +422,17 @@ transition:0.5s;
 </div>
 
     <div class="inputRow">
-      <input id="pressure" type="number" placeholder="例：10">
-      <img src="pressuregauge.png" alt="圧力計" class="pressureImg">
+      <input id="pressure"
+       type="number"
+       min="0"
+       max="14.7"
+       step="0.1"
+       placeholder="例：10">
+      
+      <img src="pressuregauge.png" 
+      alt="圧力計" 
+      class="pressureImg">
+      
     </div>
 
     <div class="quickBtns">
@@ -398,8 +464,18 @@ transition:0.5s;
 </div>
 
       <div class="inputRow">
-        <input id="flow" type="number" placeholder="例：3">
-        <img src="flowmeter.png" alt="流量計" class="flowImg">
+        
+        <input id="flow"
+       type="number"
+       min="0"
+       max="15"
+       step="0.5"
+       placeholder="例：3">
+        
+        <img src="flowmeter.png" 
+        alt="流量計" 
+        class="flowImg">
+        
       </div>
 
     </div>
@@ -418,7 +494,11 @@ transition:0.5s;
 
     <label>FiO2（%）</label>
     
-    <input id="fio2" type="number" placeholder="例：60">
+    <input id="fio2"
+       type="number"
+       min="21"
+       max="100"
+       placeholder="例：60">
 
     <label>分時換気量（L/min）</label>
     
@@ -502,10 +582,18 @@ transition:0.5s;
   <div class="nppvLeft">
 
     <label>FiO2（%）</label>
-    <input id="fio2_v" type="number" placeholder="例：60">
+  
+    <input id="fio2_v"
+       type="number"
+       min="21"
+       max="100"
+       placeholder="例：60">
 
     <label>分時換気量（L/min）</label>
-    <input id="mv_v" type="number" placeholder="例：8">
+   
+    <input id="mv_v" 
+    type="number" 
+    placeholder="例：8">
 
   </div>
 
@@ -601,6 +689,10 @@ function getFlow(){
     return parseFloat(
       document.getElementById("flow").value
     );
+  if (flowValue > 15) {
+      alert("流量は15L/min以下で入力してください");
+      return;
+    }
 
   }
 
@@ -609,6 +701,11 @@ function getFlow(){
 
     let fio2 =
       document.getElementById("fio2").value / 100;
+
+    if (fio2 < 21 || fio2 > 100) {
+        alert("FiO₂は21～100％で入力してください");
+        return;
+    }
 
     let mv =
       parseFloat(
@@ -632,6 +729,11 @@ function getFlow(){
     let fio2 =
       document.getElementById("fio2_v").value / 100;
 
+     if (fio2 < 21 || fio2 > 100) {
+        alert("FiO₂は21～100％で入力してください");
+        return;
+    }
+
     let mv =
       parseFloat(
         document.getElementById("mv_v").value
@@ -654,6 +756,12 @@ function calc(){
 
   let flow = getFlow();
 
+// ボンベ圧の上限
+if (pressure > 14.7) {
+    alert("ボンベ圧は14.7MPa以下で入力してください");
+    return;
+}
+  
   if(!pressure || pressure <= SAFE){
 
     alert("圧を確認してください");
