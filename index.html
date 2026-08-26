@@ -794,58 +794,54 @@ let minute = now.getMinutes().toString().padStart(2,"0");
 
 let emptyTime = hour + ":" + minute;
 
-  let status = "";
-  let exchange = "";
+let status = "";
+let exchange = "";
 
-  // 背景色リセット
-  document.body.classList.remove(
-    "safeBg",
-    "cautionBg",
-    "dangerBg"
-  );
+// 背景色リセット
+document.body.classList.remove(
+  "safeBg",
+  "cautionBg",
+  "dangerBg"
+);
 
-  // 危険
-  if(time < 10){
+// 🚨 交換推奨
+if(time <= 15){
 
-    status =
-      "<div class='warn'>⚠ 危険（10分未満）</div>";
+  status =
+    "<div class='warn'>🚨 交換推奨</div>";
 
-    exchange =
-      "<div class='warn'>至急交換してください</div>";
+  exchange =
+    "<div class='warn'>早めに酸素ボンベを交換してください</div>";
 
-    document.body.classList.add("dangerBg");
+  document.body.classList.add("dangerBg");
 
-  }
+}
 
-  // 注意
-  else if(time < 20){
+// ⚠️ 交換準備
+else if(time <= 30){
 
-    status =
-      "<div class='warn'>⚠ 注意（20分未満）</div>";
+  status =
+    "<div class='warn'>⚠️ 交換準備</div>";
 
-    exchange =
-      `<div class='warn'>
-      あと ${Math.round(time - 5)} 分以内に交換推奨
-      </div>`;
+  exchange =
+    "<div class='warn'>酸素ボンベの交換を準備してください</div>";
 
-    document.body.classList.add("cautionBg");
+  document.body.classList.add("cautionBg");
 
-  }
+}
 
-  // 安全
-  else{
+// ✅ 使用可能
+else{
 
-    status =
-      "<div class='safe'>✔ 使用可能</div>";
+  status =
+    "<div class='safe'>✅ 使用可能</div>";
 
-    exchange =
-      `<div class='safe'>
-      約 ${Math.round(time - 10)} 分後に交換準備推奨
-      </div>`;
+  exchange =
+    "<div class='safe'>現在の酸素ボンベを継続して使用できます</div>";
 
-    document.body.classList.add("safeBg");
+  document.body.classList.add("safeBg");
 
-  }
+}
 
  document.getElementById("result").innerHTML =
 `
