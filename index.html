@@ -843,8 +843,10 @@ else{
 
 }
 
- document.getElementById("result").innerHTML =
+document.getElementById("result").innerHTML =
 `
+${status}
+
 <div class="resultTitle">
 残り使用時間
 </div>
@@ -860,8 +862,6 @@ ${Math.round(time)}分
 <div class="emptyTime">
 ${emptyTime}
 </div>
-
-${status}
 
 ${exchange}
 `;
